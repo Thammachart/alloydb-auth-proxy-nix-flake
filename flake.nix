@@ -13,14 +13,13 @@
       forEachSupportedSystem = f: nixpkgs.lib.genAttrs supportedSystems (system: f rec {
         pkgs = import nixpkgs { inherit overlays system; };
 
-        pulumi-cli = pkgs.callPackage ./package.nix {};
+        alloydb = pkgs.callPackage ./package.nix {};
       });
     in
     {
-      packages = forEachSupportedSystem ({ pulumi-cli, ... }: {
-        default = pulumi-cli;
-
-        pulumi-cli = pulumi-cli;
+      packages = forEachSupportedSystem ({ alloydb, ... }: {
+        default = alloydb;
+        alloydb-auth-proxy = alloydb;
       });
     };
 }

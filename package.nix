@@ -8,15 +8,17 @@ stdenv.mkDerivation {
 
   src = fetchurl metadata.systems.${stdenv.hostPlatform.system};
 
+  phases = [ "installPhase" ];
+
   installPhase = ''
-    install -D -t $out/bin/ *
+    install -m755 -D $src $out/bin/alloydb-auth-proxy
   '';
 
   # nativeBuildInputs = [];
   # buildInputs = [ stdenv.cc.cc.libgcc or null ];
 
   meta = with lib; {
-    homepage = "https://pulumi.io/";
-    description = "Pulumi CLI (unwrapped)";
+    homepage = "https://github.com/GoogleCloudPlatform/alloydb-auth-proxy";
+    description = "AlloyDB Auth Proxy Nix Flake";
   };
 }

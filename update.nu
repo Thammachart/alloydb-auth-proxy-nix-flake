@@ -26,7 +26,8 @@ def main [versionTag: string = "latest"] {
   for sys in $systems {
     let url = createUrl $version $sys.os $sys.arch;
     let sha256 = sha256sum $url;
-    $nixos = $nixos | insert $"($sys.archNix)-($sys.os)" { url: $url, sha256: $sha256, name: "alloydb" };
+    $nixos = $nixos | insert $"($sys.archNix)-($sys.os)" { url: $url, sha256: $sha256 };
   }
   generateMetadata { version: $version, systems: $nixos } | save --force metadata.json;
+  nix flake update;
 }
