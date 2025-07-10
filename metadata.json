@@ -1,9 +1,9 @@
 {
-  "version": "1.13.3",
+  "version": "1.13.4",
   "systems": {
     "x86_64-linux": {
-      "url": "https://storage.googleapis.com/alloydb-auth-proxy/v1.13.3/alloydb-auth-proxy.linux.amd64",
-      "sha256": "48e768d2d7b71d098d34d8050fa4446bda3e389bacbcce5d5a249cd6030b8abe"
+      "url": "https://storage.googleapis.com/alloydb-auth-proxy/v1.13.4/alloydb-auth-proxy.linux.amd64",
+      "sha256": "244af7a8a7aeea5c60ff016dd03e88a48da90c1752847962855709d246e9cbe6"
     }
   }
 }
