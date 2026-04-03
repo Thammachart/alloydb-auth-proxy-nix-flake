@@ -3,7 +3,7 @@
   "systems": {
     "x86_64-linux": {
       "url": "https://storage.googleapis.com/alloydb-auth-proxy/v1.14.2/alloydb-auth-proxy.linux.amd64",
-      "sha256": "6c2cba7755a009a0d9d54390d761d964161ac07b463d3cd811ef5111ab356ad0"
+      "sha256": "ca3cd3458f532c375b637f42df2b18a6a44ef7cc05b36eecae4c08ab54cbd988"
     }
   }
 }
